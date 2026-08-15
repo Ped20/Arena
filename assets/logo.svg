@@ -1,0 +1,16 @@
+<svg width="64" height="64" viewBox="0 0 64 64" fill="none" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Data sprout logo">
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="64" y2="64" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#059669"/>
+      <stop offset="1" stop-color="#10b981"/>
+    </linearGradient>
+  </defs>
+  <rect width="64" height="64" rx="16" fill="url(#bg)"/>
+  <!-- three ascending bars = data -->
+  <rect x="16" y="34" width="8" height="14" rx="3" fill="#ffffff" opacity="0.55"/>
+  <rect x="28" y="28" width="8" height="20" rx="3" fill="#ffffff" opacity="0.78"/>
+  <rect x="40" y="22" width="8" height="26" rx="3" fill="#ffffff"/>
+  <!-- sprout leaf -->
+  <path d="M44 22 C44 12, 52 10, 58 12 C57 20, 50 23, 44 22 Z" fill="#fbbf24"/>
+  <path d="M44 22 C44 24, 46 26, 48 26" stroke="#065f46" stroke-width="1.6" stroke-linecap="round"/>
+</svg>

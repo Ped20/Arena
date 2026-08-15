@@ -1,0 +1,50 @@
+<svg width="1200" height="300" viewBox="0 0 1200 300" fill="none" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Prathamesh Deshmukh — Research Data Scientist">
+  <defs>
+    <linearGradient id="sky" x1="0" y1="0" x2="1200" y2="300" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#0a1622"/>
+      <stop offset="0.5" stop-color="#0d1f2a"/>
+      <stop offset="1" stop-color="#0a1f18"/>
+    </linearGradient>
+    <linearGradient id="acc" x1="0" y1="0" x2="1" y2="0">
+      <stop stop-color="#34d399"/>
+      <stop offset="1" stop-color="#10b981"/>
+    </linearGradient>
+    <linearGradient id="gold" x1="0" y1="0" x2="1" y2="0">
+      <stop stop-color="#fde68a"/>
+      <stop offset="1" stop-color="#fbbf24"/>
+    </linearGradient>
+    <radialGradient id="glow" cx="0" cy="0" r="1" gradientUnits="userSpaceOnUse" gradientTransform="translate(930 150) rotate(90) scale(240)">
+      <stop stop-color="#10b981" stop-opacity="0.22"/>
+      <stop offset="1" stop-color="#10b981" stop-opacity="0"/>
+    </radialGradient>
+  </defs>
+
+  <rect width="1200" height="300" fill="url(#sky)"/>
+  <rect width="1200" height="300" fill="url(#glow)"/>
+
+  <!-- dotted grid -->
+  <g fill="#34d399" opacity="0.10">
+    <circle cx="40" cy="40" r="1.6"/><circle cx="90" cy="40" r="1.6"/><circle cx="140" cy="40" r="1.6"/><circle cx="190" cy="40" r="1.6"/><circle cx="240" cy="40" r="1.6"/>
+    <circle cx="40" cy="90" r="1.6"/><circle cx="90" cy="90" r="1.6"/><circle cx="140" cy="90" r="1.6"/><circle cx="190" cy="90" r="1.6"/><circle cx="240" cy="90" r="1.6"/>
+    <circle cx="40" cy="140" r="1.6"/><circle cx="90" cy="140" r="1.6"/><circle cx="140" cy="140" r="1.6"/><circle cx="190" cy="140" r="1.6"/><circle cx="240" cy="140" r="1.6"/>
+    <circle cx="40" cy="190" r="1.6"/><circle cx="90" cy="190" r="1.6"/><circle cx="140" cy="190" r="1.6"/><circle cx="190" cy="190" r="1.6"/><circle cx="240" cy="190" r="1.6"/>
+    <circle cx="40" cy="240" r="1.6"/><circle cx="90" cy="240" r="1.6"/><circle cx="140" cy="240" r="1.6"/><circle cx="190" cy="240" r="1.6"/><circle cx="240" cy="240" r="1.6"/>
+  </g>
+
+  <!-- logo mark -->
+  <g transform="translate(72 84)">
+    <rect width="132" height="132" rx="30" fill="#0d1f2a" stroke="#12303b" stroke-width="2"/>
+    <rect x="33" y="70" width="17" height="30" rx="6" fill="#34d399" opacity="0.5"/>
+    <rect x="58" y="57" width="17" height="43" rx="6" fill="#34d399" opacity="0.78"/>
+    <rect x="83" y="44" width="17" height="56" rx="6" fill="#34d399"/>
+    <path d="M91 44 C91 23, 108 19, 121 22 C119 39, 104 46, 91 44 Z" fill="#fbbf24"/>
+  </g>
+
+  <!-- headline -->
+  <text x="248" y="128" font-family="ui-sans-serif, system-ui, Segoe UI, Helvetica, Arial" font-size="46" font-weight="700" letter-spacing="0.5" fill="#f0f6fc">PRATHAMESH DESHMUKH</text>
+  <text x="248" y="180" font-family="ui-sans-serif, system-ui, Segoe UI, Helvetica, Arial" font-size="26" font-weight="600" fill="url(#acc)">Research Data Scientist</text>
+  <text x="248" y="222" font-family="ui-sans-serif, system-ui, Segoe UI, Helvetica, Arial" font-size="18" fill="#8b949e">R · Statistics · Plant-Breeding Analytics · Reproducible Research</text>
+
+  <!-- accent rule -->
+  <rect x="248" y="244" width="120" height="5" rx="2.5" fill="url(#gold)"/>
+</svg>
