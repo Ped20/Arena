@@ -1,0 +1,253 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Prathamesh Deshmukh — Research Data Scientist</title>
+<meta name="description" content="Prathamesh Deshmukh (Ped20) — research data scientist. R, statistics, and plant-breeding analytics. Portfolio of reproducible data projects." />
+<style>
+  :root {
+    --bg: #0a141f;
+    --bg2: #0d1f2a;
+    --panel: #10212c;
+    --panel2: #122633;
+    --border: #1d3846;
+    --text: #dbe7ec;
+    --muted: #8ba0ad;
+    --emerald: #10b981;
+    --emerald-2: #34d399;
+    --gold: #fbbf24;
+    --radius: 16px;
+  }
+  * { box-sizing: border-box; }
+  html { scroll-behavior: smooth; }
+  body {
+    margin: 0;
+    background: radial-gradient(1200px 600px at 80% -10%, #0d2b22 0%, transparent 55%), var(--bg);
+    color: var(--text);
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif;
+    line-height: 1.65;
+  }
+  a { color: var(--emerald-2); text-decoration: none; }
+  a:hover { text-decoration: underline; }
+
+  /* nav */
+  .nav {
+    position: sticky; top: 0; z-index: 20;
+    display: flex; align-items: center; gap: 18px;
+    padding: 12px 28px;
+    background: rgba(10,20,31,.82); backdrop-filter: blur(8px);
+    border-bottom: 1px solid var(--border);
+  }
+  .nav .brand { display: flex; align-items: center; gap: 10px; font-weight: 700; color: #fff; }
+  .nav .brand svg { width: 28px; height: 28px; }
+  .nav .links { margin-left: auto; display: flex; gap: 18px; flex-wrap: wrap; font-size: 14px; }
+  .nav .links a { color: var(--muted); }
+  .nav .links a:hover { color: var(--emerald-2); text-decoration: none; }
+
+  main { max-width: 1040px; margin: 0 auto; padding: 40px 24px 90px; }
+
+  /* hero */
+  .hero { text-align: center; padding: 30px 0 10px; }
+  .hero .banner { width: 100%; max-width: 960px; border-radius: var(--radius); }
+  .hero .tagline { font-size: 19px; color: var(--muted); max-width: 640px; margin: 18px auto 22px; }
+  .cta { display: inline-flex; gap: 12px; flex-wrap: wrap; justify-content: center; }
+  .btn {
+    display: inline-block; padding: 11px 22px; border-radius: 999px; font-weight: 600; font-size: 14px;
+    border: 1px solid var(--border); color: var(--text); transition: .18s ease;
+  }
+  .btn:hover { text-decoration: none; transform: translateY(-1px); }
+  .btn.primary { background: linear-gradient(135deg, #10b981, #059669); border-color: transparent; color: #04120c; }
+  .btn.ghost:hover { border-color: var(--emerald); color: var(--emerald-2); }
+
+  section { margin-top: 56px; }
+  h2 { font-size: 24px; color: #fff; display: flex; align-items: center; gap: 10px; }
+  h2 .bar { width: 5px; height: 24px; border-radius: 3px; background: linear-gradient(#34d399,#10b981); }
+  .sub { color: var(--muted); font-size: 15px; margin-top: 6px; }
+
+  /* cards grid */
+  .grid { display: grid; gap: 16px; margin-top: 22px; }
+  .grid.cols-3 { grid-template-columns: repeat(3, 1fr); }
+  .grid.cols-2 { grid-template-columns: repeat(2, 1fr); }
+  .card {
+    background: linear-gradient(180deg, var(--panel), var(--bg2));
+    border: 1px solid var(--border); border-radius: var(--radius); padding: 22px;
+    transition: .18s ease;
+  }
+  .card:hover { border-color: var(--emerald); transform: translateY(-2px); }
+  .card h3 { margin: 0 0 6px; color: #fff; font-size: 17px; }
+  .card p { margin: 0; color: var(--muted); font-size: 14.5px; }
+  .card .icon { font-size: 24px; }
+
+  /* skills */
+  .skill { display: inline-block; margin: 5px 6px 0 0; padding: 7px 13px; border-radius: 999px;
+    background: var(--panel2); border: 1px solid var(--border); font-size: 13.5px; color: var(--text); }
+  .skill b { color: var(--emerald-2); font-weight: 600; }
+
+  /* project cards */
+  .project { display: flex; flex-direction: column; }
+  .project .num { font-size: 12px; letter-spacing: .12em; color: var(--gold); font-weight: 700; }
+  .project .tag { font-size: 12.5px; color: var(--muted); margin-top: 4px; }
+  .project a.more { margin-top: auto; padding-top: 14px; font-size: 14px; font-weight: 600; }
+
+  /* prob bars */
+  .prob { margin-top: 10px; }
+  .prob .row { display: flex; align-items: center; gap: 10px; margin: 8px 0; font-size: 13.5px; }
+  .prob .label { width: 190px; color: var(--muted); flex-shrink: 0; }
+  .prob .track { flex: 1; height: 9px; background: var(--panel2); border-radius: 6px; overflow: hidden; }
+  .prob .fill { height: 100%; border-radius: 6px; background: linear-gradient(90deg,#34d399,#10b981); }
+  .prob .val { width: 54px; text-align: right; color: var(--emerald-2); font-weight: 600; }
+
+  footer { border-top: 1px solid var(--border); padding: 34px 24px 44px; text-align: center; color: var(--muted); font-size: 14px; }
+  footer .links { display: flex; gap: 18px; justify-content: center; flex-wrap: wrap; margin-bottom: 12px; }
+
+  @media (max-width: 860px) {
+    .grid.cols-3, .grid.cols-2 { grid-template-columns: 1fr; }
+    .prob .label { width: 130px; }
+  }
+</style>
+</head>
+<body>
+
+<nav class="nav">
+  <div class="brand">
+    <svg viewBox="0 0 64 64" aria-hidden="true">
+      <defs><linearGradient id="lbg" x1="0" y1="0" x2="64" y2="64" gradientUnits="userSpaceOnUse">
+        <stop stop-color="#059669"/><stop offset="1" stop-color="#10b981"/></linearGradient></defs>
+      <rect width="64" height="64" rx="16" fill="url(#lbg)"/>
+      <rect x="16" y="34" width="8" height="14" rx="3" fill="#fff" opacity=".55"/>
+      <rect x="28" y="28" width="8" height="20" rx="3" fill="#fff" opacity=".78"/>
+      <rect x="40" y="22" width="8" height="26" rx="3" fill="#fff"/>
+      <path d="M44 22 C44 12, 52 10, 58 12 C57 20, 50 23, 44 22 Z" fill="#fbbf24"/>
+    </svg>
+    <span>Prathamesh Deshmukh</span>
+  </div>
+  <div class="links">
+    <a href="#about">About</a>
+    <a href="#skills">Skills</a>
+    <a href="#projects">Projects</a>
+    <a href="#career">Career</a>
+    <a href="#contact">Contact</a>
+  </div>
+</nav>
+
+<main>
+  <header class="hero">
+    <img class="banner" src="../assets/banner.svg" alt="Prathamesh Deshmukh — Research Data Scientist" />
+    <p class="tagline">Research data scientist turning experimental field data into selection decisions — with R, statistics, and reproducible research.</p>
+    <div class="cta">
+      <a class="btn primary" href="#projects">View portfolio</a>
+      <a class="btn ghost" href="https://github.com/Ped20">GitHub →</a>
+      <a class="btn ghost" href="../job-market-report.md">Job-market research</a>
+    </div>
+  </header>
+
+  <section id="about">
+    <h2><span class="bar"></span>About</h2>
+    <p class="sub">From Pune, India. I work at the intersection of statistics, R, and plant-breeding analytics — taking experimental data from raw files to decisions stakeholders can act on.</p>
+    <div class="grid cols-3">
+      <div class="card">
+        <div class="icon">📊</div>
+        <h3>Statistical analysis</h3>
+        <p>EDA, ANOVA + post-hoc ranking, linear regression, clustering and PCA — applied end to end on real genotype data.</p>
+      </div>
+      <div class="card">
+        <div class="icon">♻️</div>
+        <h3>Reproducible research</h3>
+        <p>Self-contained scripts, versioned data, clean output folders, MIT-licensed — so every result can be re-run.</p>
+      </div>
+      <div class="card">
+        <div class="icon">🎛️</div>
+        <h3>Interactive delivery</h3>
+        <p>R Shiny dashboards that let non-coders explore the data themselves — the #1 ask from field teams.</p>
+      </div>
+    </div>
+  </section>
+
+  <section id="skills">
+    <h2><span class="bar"></span>Skills</h2>
+    <p class="sub">The toolset behind the projects below.</p>
+    <div style="margin-top:16px">
+      <span class="skill"><b>R</b> (4.3+)</span>
+      <span class="skill"><b>tidyverse</b> · dplyr · tidyr</span>
+      <span class="skill"><b>ggplot2</b></span>
+      <span class="skill"><b>R Shiny</b></span>
+      <span class="skill"><b>agricolae</b> (Duncan, LSD)</span>
+      <span class="skill"><b>factoextra</b> (PCA/clustering)</span>
+      <span class="skill"><b>corrplot</b></span>
+      <span class="skill"><b>Statistics</b> · ANOVA · regression · PCA</span>
+      <span class="skill"><b>Git</b> &amp; GitHub</span>
+      <span class="skill"><b>Markdown</b> &amp; scientific writing</span>
+    </div>
+  </section>
+
+  <section id="projects">
+    <h2><span class="bar"></span>Portfolio</h2>
+    <p class="sub">One pipeline — 100 plant genotypes from raw data to a stakeholder-ready dashboard — shipped as five reproducible modules.</p>
+    <div class="grid cols-3">
+      <div class="card project">
+        <span class="num">PROJECT 1</span>
+        <h3>Exploratory Data Analysis</h3>
+        <p class="tag">summary stats · correlation · distributions</p>
+        <a class="more" href="https://github.com/Ped20/Project-1-Exploratory-Data-Analysis">Open repo →</a>
+      </div>
+      <div class="card project">
+        <span class="num">PROJECT 2</span>
+        <h3>ANOVA &amp; Post-Hoc</h3>
+        <p class="tag">one-way ANOVA · Duncan's ranking</p>
+        <a class="more" href="https://github.com/Ped20/Project-2-ANOVA-Post-Hoc-test">Open repo →</a>
+      </div>
+      <div class="card project">
+        <span class="num">PROJECT 3</span>
+        <h3>Linear Regression</h3>
+        <p class="tag">simple + multiple models · diagnostics</p>
+        <a class="more" href="https://github.com/Ped20/Project-3-linear-regression">Open repo →</a>
+      </div>
+      <div class="card project">
+        <span class="num">PROJECT 4</span>
+        <h3>Clustering &amp; PCA</h3>
+        <p class="tag">K-Means (K=3) · principal components</p>
+        <a class="more" href="https://github.com/Ped20/Project-4-Clustering-and-PCA">Open repo →</a>
+      </div>
+      <div class="card project">
+        <span class="num">PROJECT 5</span>
+        <h3>Shiny Dashboard</h3>
+        <p class="tag">interactive "Plant Trait Explorer"</p>
+        <a class="more" href="https://github.com/Ped20/Project-5-shiny-dashboard">Open repo →</a>
+      </div>
+      <div class="card project">
+        <span class="num">RESEARCH</span>
+        <h3>Job-Market Analysis</h3>
+        <p class="tag">2026 roles · probability · skills gap</p>
+        <a class="more" href="../job-market-report.md">Read the report →</a>
+      </div>
+    </div>
+  </section>
+
+  <section id="career">
+    <h2><span class="bar"></span>Career focus</h2>
+    <p class="sub">Estimated hiring probability over 90 days of targeted applications, from the 2026 job-market analysis (master's degree + R + research skills).</p>
+    <div class="card">
+      <div class="prob">
+        <div class="row"><span class="label">ICAR JRF / SRF</span><span class="track"><span class="fill" style="width:45%"></span></span><span class="val">35–50%</span></div>
+        <div class="row"><span class="label">Research internship</span><span class="track"><span class="fill" style="width:50%"></span></span><span class="val">40–60%</span></div>
+        <div class="row"><span class="label">Seed co. / CGIAR RA</span><span class="track"><span class="fill" style="width:32%"></span></span><span class="val">25–40%</span></div>
+        <div class="row"><span class="label">CRO statistical programmer</span><span class="track"><span class="fill" style="width:27%"></span></span><span class="val">20–35%</span></div>
+        <div class="row"><span class="label">Global dev / CGIAR analyst</span><span class="track"><span class="fill" style="width:15%"></span></span><span class="val">10–20%</span></div>
+      </div>
+      <p style="margin-top:14px">Next skills on the roadmap: <b>mixed models &amp; heritability (BLUP)</b>, <b>Python + SQL</b>, and a <b>live-deployed Shiny app</b>.</p>
+    </div>
+  </section>
+</main>
+
+<footer id="contact">
+  <div class="links">
+    <a href="https://github.com/Ped20">GitHub</a>
+    <a href="mailto:prathamesh.deshmukh@example.com">Email</a>
+    <a href="https://www.linkedin.com/">LinkedIn</a>
+  </div>
+  <div>© 2026 Prathamesh Deshmukh · Built with R, statistics, and a lot of chai.</div>
+</footer>
+
+</body>
+</html>
