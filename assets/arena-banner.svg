@@ -1,0 +1,62 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 900 240" width="900" height="240" role="img" aria-label="ARENA — where ideas come to play">
+  <defs>
+    <linearGradient id="arenaBg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#0d1117"/>
+      <stop offset="100%" stop-color="#161b22"/>
+    </linearGradient>
+    <linearGradient id="arenaNeon" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#00d9ff">
+        <animate attributeName="stop-color" values="#00d9ff;#7b61ff;#ff61d0;#00d9ff" dur="9s" repeatCount="indefinite"/>
+      </stop>
+      <stop offset="50%" stop-color="#7b61ff">
+        <animate attributeName="stop-color" values="#7b61ff;#ff61d0;#00d9ff;#7b61ff" dur="9s" repeatCount="indefinite"/>
+      </stop>
+      <stop offset="100%" stop-color="#00d9ff">
+        <animate attributeName="stop-color" values="#ff61d0;#00d9ff;#7b61ff;#ff61d0" dur="9s" repeatCount="indefinite"/>
+      </stop>
+    </linearGradient>
+    <filter id="arenaGlow" x="-30%" y="-30%" width="160%" height="160%">
+      <feGaussianBlur stdDeviation="6" result="blur"/>
+      <feMerge>
+        <feMergeNode in="blur"/>
+        <feMergeNode in="SourceGraphic"/>
+      </feMerge>
+    </filter>
+  </defs>
+
+  <rect width="900" height="240" rx="28" fill="url(#arenaBg)"/>
+  <rect x="2" y="2" width="896" height="236" rx="26" fill="none" stroke="#30363d" stroke-width="2"/>
+
+  <!-- floating particles -->
+  <circle cx="120" cy="180" r="3" fill="#00d9ff" opacity="0">
+    <animate attributeName="cy" values="215;35" dur="6s" repeatCount="indefinite"/>
+    <animate attributeName="opacity" values="0;0.85;0" dur="6s" repeatCount="indefinite"/>
+  </circle>
+  <circle cx="250" cy="200" r="2" fill="#7b61ff" opacity="0">
+    <animate attributeName="cy" values="220;30" dur="7.5s" repeatCount="indefinite"/>
+    <animate attributeName="opacity" values="0;0.8;0" dur="7.5s" repeatCount="indefinite"/>
+  </circle>
+  <circle cx="430" cy="190" r="2" fill="#ff61d0" opacity="0">
+    <animate attributeName="cy" values="210;40" dur="5.5s" repeatCount="indefinite"/>
+    <animate attributeName="opacity" values="0;0.7;0" dur="5.5s" repeatCount="indefinite"/>
+  </circle>
+  <circle cx="640" cy="195" r="2.5" fill="#00d9ff" opacity="0">
+    <animate attributeName="cy" values="215;35" dur="6.8s" repeatCount="indefinite"/>
+    <animate attributeName="opacity" values="0;0.9;0" dur="6.8s" repeatCount="indefinite"/>
+  </circle>
+  <circle cx="790" cy="175" r="3" fill="#7b61ff" opacity="0">
+    <animate attributeName="cy" values="205;50" dur="8.2s" repeatCount="indefinite"/>
+    <animate attributeName="opacity" values="0;0.75;0" dur="8.2s" repeatCount="indefinite"/>
+  </circle>
+
+  <!-- wordmark -->
+  <text x="450" y="118" text-anchor="middle" font-family="'Segoe UI','Helvetica Neue',Arial,sans-serif" font-size="84" font-weight="800" letter-spacing="20" fill="url(#arenaNeon)" filter="url(#arenaGlow)">ARENA</text>
+
+  <!-- tagline -->
+  <text x="450" y="164" text-anchor="middle" font-family="'Segoe UI','Helvetica Neue',Arial,sans-serif" font-size="21" letter-spacing="7" fill="#8b949e">WHERE IDEAS COME TO PLAY</text>
+
+  <!-- pulsing underline -->
+  <rect x="325" y="184" width="250" height="4" rx="2" fill="url(#arenaNeon)">
+    <animate attributeName="opacity" values="0.35;1;0.35" dur="3s" repeatCount="indefinite"/>
+  </rect>
+</svg>
