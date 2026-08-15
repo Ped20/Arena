@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>ARENA — README live preview</title>
+<style>
+  :root {
+    --bg: #0d1117;
+    --panel: #161b22;
+    --border: #30363d;
+    --text: #c9d1d9;
+    --muted: #8b949e;
+    --accent: #00d9ff;
+  }
+  * { box-sizing: border-box; }
+  body {
+    margin: 0;
+    background: var(--bg);
+    color: var(--text);
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif;
+    line-height: 1.6;
+  }
+  .topbar {
+    position: sticky;
+    top: 0;
+    z-index: 10;
+    background: rgba(13,17,23,.92);
+    backdrop-filter: blur(6px);
+    border-bottom: 1px solid var(--border);
+    padding: 10px 24px;
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    font-size: 13px;
+  }
+  .topbar .dot { width: 10px; height: 10px; border-radius: 50%; background: #3fb950; box-shadow: 0 0 8px #3fb950; animation: pulse 1.6s infinite; }
+  @keyframes pulse { 50% { opacity: .4; } }
+  .topbar code { background: var(--panel); border: 1px solid var(--border); border-radius: 6px; padding: 2px 6px; }
+  main { max-width: 1012px; margin: 0 auto; padding: 32px 24px 80px; }
+  .card {
+    background: var(--panel);
+    border: 1px solid var(--border);
+    border-radius: 12px;
+    padding: 28px 28px 12px;
+  }
+  .banner { width: 100%; border-radius: 12px; display: block; }
+  .center { text-align: center; }
+  .badges { display: flex; flex-wrap: wrap; justify-content: center; gap: 6px; margin: 10px 0 4px; }
+  .badges img { border-radius: 6px; }
+  .typing { margin-top: 6px; }
+  .typing img { max-width: 100%; }
+  h1, h2 { color: #f0f6fc; border-bottom: 1px solid var(--border); padding-bottom: 8px; }
+  h2 { font-size: 20px; margin-top: 28px; }
+  h2 .icon { margin-right: 6px; }
+  .quote { border-left: 4px solid var(--accent); padding-left: 14px; color: var(--muted); font-style: italic; }
+  table { border-collapse: collapse; width: 100%; margin: 14px 0; }
+  th, td { border: 1px solid var(--border); padding: 8px 12px; text-align: left; font-size: 14px; }
+  th { background: #0d1117; color: #f0f6fc; }
+  a { color: var(--accent); text-decoration: none; }
+  a:hover { text-decoration: underline; }
+  ul { padding-left: 22px; }
+  details {
+    border: 1px solid var(--border);
+    border-radius: 8px;
+    padding: 10px 16px;
+    margin: 12px 0;
+    background: #0d1117;
+  }
+  summary { cursor: pointer; color: #f0f6fc; font-weight: 600; user-select: none; }
+  details[open] summary { margin-bottom: 8px; }
+  .stats { display: flex; flex-wrap: wrap; justify-content: center; gap: 12px; margin: 14px 0; }
+  .stats img { max-width: 100%; border-radius: 8px; }
+  .footer { text-align: center; color: var(--muted); margin-top: 28px; font-size: 14px; }
+  .note { text-align: center; color: var(--muted); font-size: 13px; margin-top: 10px; }
+</style>
+</head>
+<body>
+  <div class="topbar">
+    <span class="dot"></span>
+    <span><b>Live preview</b> of <code>README.md</code> — the widgets are real and update by themselves</span>
+  </div>
+
+  <main>
+    <div class="card">
+      <img class="banner" src="../assets/arena-banner.svg" alt="ARENA — where ideas come to play" />
+
+      <p class="center" style="margin-top:18px;">
+        <img src="https://komarev.com/ghpvc/?username=Ped20&style=for-the-badge&color=00d9ff&label=PROFILE+VIEWS&labelColor=0d1117&abbreviated=true" alt="Live profile view counter" />
+      </p>
+
+      <p class="center typing">
+        <img src="https://readme-typing-svg.demolab.com/?font=Fira+Code&weight=600&size=20&pause=1400&duration=3200&color=00D9FF&center=true&vCenter=true&width=560&lines=A+place+where+ideas+come+to+play;One+repo.+Infinite+possibilities.;Live+views.+Real+stats.+Zero+noise." alt="Animated typing headline" />
+      </p>
+
+      <p class="badges">
+        <img src="https://img.shields.io/badge/Arena-v1.0.0-00d9ff?style=for-the-badge&labelColor=0d1117" alt="Arena v1.0.0" />
+        <img src="https://img.shields.io/github/stars/Ped20/Arena?style=for-the-badge&label=Stars&color=00d9ff&labelColor=0d1117" alt="Stars" />
+        <img src="https://img.shields.io/github/followers/Ped20?style=for-the-badge&label=Followers&color=00d9ff&labelColor=0d1117" alt="Followers" />
+        <img src="https://img.shields.io/github/last-commit/Ped20/Arena?style=for-the-badge&label=Last+commit&color=00d9ff&labelColor=0d1117" alt="Last commit" />
+      </p>
+
+      <h2><span class="icon">🏟️</span>About Arena</h2>
+      <p><strong>Arena</strong> is a public playground — one repo where ideas get thrown in, experimented on, and occasionally made to shine. No hidden drafts, no gatekeeping: everything lives out in the open, tracked, versioned, and visibly <strong>alive</strong>.</p>
+      <p class="quote">🏟️ One repo. Infinite possibilities.</p>
+
+      <h2><span class="icon">🎪</span>What's inside Arena</h2>
+      <table>
+        <tr><th>Piece</th><th>Why it matters</th></tr>
+        <tr><td>⚡ Live everything</td><td>view counter, stars, followers &amp; last-commit badges refresh in real time</td></tr>
+        <tr><td>📈 Stats on tap</td><td>GitHub stats, top languages &amp; streak cards render automatically</td></tr>
+        <tr><td>🎬 Motion</td><td>animated banner + typing headline — READMEs don't have to be static</td></tr>
+        <tr><td>🧩 Collapsible blocks</td><td>click-to-expand sections keep the story tidy</td></tr>
+        <tr><td>🔓 Open by default</td><td>all of it is public and remixable</td></tr>
+      </table>
+
+      <h2><span class="icon">📊</span>Live GitHub pulse</h2>
+      <div class="stats">
+        <img src="https://github-readme-stats.vercel.app/api?username=Ped20&show_icons=true&include_all_commits=true&count_private=true&hide_border=true&bg_color=0d1117&title_color=00d9ff&text_color=c9d1d9&icon_color=00d9ff&rank_icon=github" alt="GitHub stats" />
+        <img src="https://github-readme-stats.vercel.app/api/top-langs/?username=Ped20&layout=compact&hide_border=true&bg_color=0d1117&title_color=00d9ff&text_color=c9d1d9&icon_color=00d9ff" alt="Top languages" />
+      </div>
+      <div class="stats">
+        <img src="https://streak-stats.demolab.com/?user=Ped20&theme=dark&hide_border=true&background=0d1117&ring=00d9ff&fire=00d9ff&currStreakLabel=00d9ff&sideLabels=c9d1d9" alt="GitHub streak" />
+      </div>
+
+      <h2><span class="icon">🧑‍🚀</span>About the Maker</h2>
+      <p>Hi! I'm <strong>Prathamesh Deshmukh</strong> (<a href="https://github.com/Ped20">@Ped20</a>) — builder of <strong>Arena</strong>, data-science explorer from <strong>Pune, India</strong>.</p>
+      <ul>
+        <li>🔬 Exploring <strong>EDA, ANOVA, regression, clustering &amp; PCA</strong> — one R project at a time</li>
+        <li>🎛️ Turning stats into <strong>interactive Shiny dashboards</strong></li>
+        <li>🏟️ Founder &amp; chief janitor of this Arena</li>
+        <li>💬 Always up for talking data, R, or why p-values deserve more respect</li>
+      </ul>
+
+      <details open>
+        <summary>🗺️ Roadmap — what's next for Arena</summary>
+        <ul>
+          <li>✅ Launch the Arena repo</li>
+          <li>✅ Live view counter + real-time badges</li>
+          <li>☐ Spotlight gallery for every project</li>
+          <li>☐ Public stats API for the arena</li>
+          <li>☐ Community corner — your ideas here</li>
+        </ul>
+      </details>
+
+      <details>
+        <summary>🎲 Arena fun facts</summary>
+        <ul>
+          <li>The counter started at <strong>1</strong> the moment this README went live.</li>
+          <li>Every time someone opens this page, the view count goes up — so yes, <em>you just did</em>. 👀</li>
+          <li>The banner is a hand-written <strong>animated SVG</strong> — no GIFs were harmed.</li>
+        </ul>
+      </details>
+
+      <p class="footer"><b>Thanks for visiting the Arena 🙌</b><br /><span style="font-size:13px;">Made with ❤️ and way too much R. — @Ped20</span></p>
+    </div>
+
+    <p class="note">Tip: open the real thing at <code>github.com/Ped20/Arena</code> — this page just mirrors it so you can see the animations &amp; live counters without leaving your browser.</p>
+  </main>
+</body>
+</html>
